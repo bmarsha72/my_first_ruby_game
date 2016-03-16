@@ -58,3 +58,27 @@ def wordReverse(string)
 end
 
 wordReverse('never eat yellow snow')
+
+
+
+#Write a function letterReverse that accepts a single argument, a string.
+#The function should maintain the order of words in the string but reverse
+#the letters in each word. Don't worry about punctuation. This will be very
+#similar to round 4 except you won't need to split them with a space.
+
+def letterReverse(string)
+  p string.reverse.split(/\W+/).reverse.join(',')
+end
+
+letterReverse("Now I know what a TV dinner feels like")
+
+
+#Write a function longest that accepts a single argument, an array of strings.
+#The method should return the longest word in the array. In case of a tie, the
+#method should return the word that appears first in the array.
+
+
+def longest(array)
+  array.sort_by {|x| x.length}.reverse
+end
+longest(["oh", "good", "grief"])
